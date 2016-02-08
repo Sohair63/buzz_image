@@ -1,8 +1,5 @@
 # BuzzImage
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/buzz_image`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Point the arrow or cursor to the image and make it buzz, customize the Buzz Screen as per your need.
 
 ## Installation
 
@@ -22,8 +19,49 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Append the following script to the `application.js` of your rails app
 
+    $ //= require buzz_main
+
+## Usage
+
+Use the following **Helper Method** in your **Views**
+
+```
+  <%= buzz_image_tag('path to image file') %>
+```
+
+e.g
+
+```
+  <%= buzz_image_tag('rails.png') %>
+```
+
+We have configured with the default value of
+
+```ruby
+def initialize
+  width = 90
+  height = 90
+  buzz_level = 1.5 # Zoom Level
+end
+```
+
+You can **Modify the Default Values in Rails Application**
+
+In the Rails app, create `config/initializer/buzz_image.rb`
+
+Add the following contect in the file:
+
+```ruby
+Rails.application.config.buzz_image.set_options do |options|
+  # Assign the values as per your need
+  options.width = 200
+  options.height = 200
+  options.buzz_level = 5
+end
+
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
