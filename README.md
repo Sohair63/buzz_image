@@ -51,7 +51,7 @@ You can **Modify the Default Values in Rails Application**
 
 In the Rails app, create `config/initializer/buzz_image.rb`
 
-Add the following contect in the file:
+Add the following content in the file:
 
 ```ruby
 Rails.application.config.buzz_image.set_options do |options|
