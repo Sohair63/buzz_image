@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Point the arrow or cursor to the image and make it Buzz (Large).}
   spec.description   = %q{Point the arrow or cursor to the image and make it buzz, customize the Buzz Screen as per your need.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/Sohair63/buzz_image"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
